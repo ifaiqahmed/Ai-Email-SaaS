@@ -1,7 +1,5 @@
 import { db } from "@/server/db";
 
-
-
 export const POST = async (req:Request) =>{
     const {data} = await req.json()
     console.log('clerk webhook received', data);
@@ -21,5 +19,4 @@ export const POST = async (req:Request) =>{
     }})
     
     return new Response ('WebHook Received', {status:200})
-    
 }
